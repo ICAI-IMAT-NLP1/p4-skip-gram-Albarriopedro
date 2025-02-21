@@ -40,7 +40,7 @@ def main():
 
     if train_model:
         print("Step 3: Subsampling frequent words...")
-        train_words, freqs = subsample_words(tokens, vocab_to_int)
+        train_words, freqs = subsample_words(tokens, vocab_to_int, threshold=1e-4)
         print(f"Subsampled words to {len(train_words)} training examples.")
 
         # Calculate the noise distribution for negative sampling
